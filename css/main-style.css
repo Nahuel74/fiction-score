@@ -1,0 +1,138 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+:root {
+    --yellow: #ef9802;
+    --red: #600601;
+    --second-font: "Noto Sans";
+    background-color: var(--red);
+    font-family: 'Shojumaru', cursive;
+    color: var(--yellow);
+    font-size: 1.25vw;
+}
+
+body {
+    margin: 0;
+}
+
+input,
+input:disabled {
+    padding: 0%;
+    border: 0;
+    text-align: center;
+}
+
+input:disabled {
+    background-color: var(--red);
+    color: white;
+}
+
+header {
+    padding: 1%;
+    margin: 0;
+    background-color: var(--yellow);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    padding: 0.2% 1%;
+    text-decoration: none;
+    color: var(--red);
+    font-size: 1.6vw;
+    transition: 700ms;
+    border-bottom: solid transparent;
+}
+
+a:hover {
+    border-bottom: solid;
+}
+
+h1 {
+    text-align: center;
+    margin: 3% 0;
+}
+
+form header {
+    padding: 0;
+    margin: 2%;
+    display: flex;
+    justify-content: space-around;
+    background: transparent;
+}
+
+header input {
+    border: 0;
+    border-bottom: 2px solid var(--yellow);
+    background-color: transparent;
+    color: var(--yellow);
+    font-family: var(--second-font);
+    font-size: 2vw;
+    transition: 500ms;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline: none;
+}
+
+select {
+    background-color: var(--yellow);
+    padding: 1vw;
+    font-size: 1.25vw;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+table,
+th,
+td {
+    font-family: var(--second-font);
+    font-size: 1.25vw;
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+}
+
+table input,
+table input:disabled {
+    width: 100%;
+    display: block;
+    padding: 0.25vw 0;
+}
+
+th {
+    padding: 0.3vw 1vw;
+}
+
+form label {
+    display: block;
+    text-align: center;
+    font-family: var(--second-font);
+}
+
+button {
+    border: none;
+    background-color: var(--yellow);
+    padding: 1vw;
+    font-size: 1.25vw;
+
+    margin-left: 78%;
+    margin-top: 3%;
+}
+
+button:hover {
+    cursor: pointer;
+}
