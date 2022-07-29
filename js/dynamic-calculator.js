@@ -6,6 +6,12 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function correctExtraPoints(){
+	if (score.value > 10){
+		score.value = 10
+	}
+}
+
 async function calculate() {
     for (let i = 0; i < inputTable.length; i++) {
         inputTable[i].onchange = function () {
@@ -23,6 +29,7 @@ async function calculate() {
 
             }
             score.value = Math.round((a / b) + Number(extraPoints.value))
+			correctExtraPoints()
         }
     }
     await delay(200)
