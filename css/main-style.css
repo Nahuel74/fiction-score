@@ -57,6 +57,11 @@ a:hover {
 h1 {
     text-align: center;
     margin: 3% 0;
+	font-size: 3.25vw;
+}
+
+form {
+	margin-top: 7%;
 }
 
 form header {
@@ -86,18 +91,22 @@ select:focus {
 select {
     background-color: var(--yellow);
     padding: 1vw;
-    font-size: 1.25vw;
+    font-size: 1.5vw;
 }
 
 select:hover {
     cursor: pointer;
 }
 
+table {
+	margin-top: 7%;
+}
+
 table,
 th,
 td {
     font-family: var(--second-font);
-    font-size: 1.25vw;
+    font-size: 1.3vw;
     text-align: center;
     border: 1px solid;
     border-collapse: collapse;
