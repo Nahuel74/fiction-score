@@ -1,0 +1,103 @@
+input,
+input:disabled {
+    padding: 0;
+    border: 0;
+    text-align: center;
+}
+
+input:disabled {
+    background-color: var(--red);
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin: 3% 0;
+    font-size: 3.25vw;
+}
+
+form {
+    margin-top: 7%;
+}
+
+form header {
+    padding: 0;
+    margin: 2%;
+    display: flex;
+    justify-content: space-around;
+    background: transparent;
+}
+
+header input {
+    border: 0;
+    border-bottom: 2px solid var(--yellow);
+    background-color: transparent;
+    color: var(--yellow);
+    font-family: var(--second-font);
+    font-size: 2vw;
+    transition: 500ms;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
+select {
+    background-color: var(--yellow);
+    padding: 1vw;
+    font-size: 1.5vw;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+table {
+    margin-top: 7%;
+}
+
+table,
+td,
+th {
+    font-family: var(--second-font);
+    font-size: 1.3vw;
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+}
+
+table input,
+table input:disabled {
+    width: 100%;
+    display: block;
+    padding: 0.25vw 0;
+}
+
+th {
+    padding: 0.3vw 1vw;
+}
+
+form label {
+    display: block;
+    text-align: center;
+    font-family: var(--second-font);
+}
+
+button {
+    border: none;
+    background-color: var(--yellow);
+    padding: 1vw;
+    font-size: 1.25vw;
+
+    margin-left: 78%;
+    margin-top: 3%;
+}
+
+button:hover {
+    cursor: pointer;
+}

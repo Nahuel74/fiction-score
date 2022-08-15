@@ -1,0 +1,42 @@
+table {
+    margin-top: 7%;
+}
+
+table,
+th {
+    font-family: var(--second-font);
+    font-size: 1.3vw;
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+}
+
+td {
+    border-color: var(--red);
+}
+
+table input,
+table input:disabled {
+    width: 100%;
+    display: block;
+    padding: 0.25vw 0;
+}
+
+th {
+    padding: 0.3vw 1vw;
+}
+
+input,
+input:disabled {
+    padding: 0;
+    border: 0;
+    text-align: center;
+}
+
+input:disabled {
+    background-color: var(--yellow);
+    color: var(--red);
+}
