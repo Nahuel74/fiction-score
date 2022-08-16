@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
     <header>
         <nav>
             <a href="../index.php">NEW</a>
@@ -27,14 +28,28 @@
         </nav>
     </header>
 
-    <form>
-        <div id="main-div">
-            <div id="login-div">
+    <div id="login-background">
+        <form id="login-form">
+            <div id="login-input">
                 <input type="text" placeholder="username" required="required">
-                <input type="password" placeholder="password" required="required">
-                <button type="submit">Log In</button>
+                <input type="password" placeholder="password" required="required">   
             </div>
-            <button>Create new account</button>
+            <button type="submit" id="login-submit">Log In</button>
+        </form>
+        <button id="signup-start">Create new account</button>
+    </div>
+    <div id="signup-background">
+        <div id="signup-title">
+            <h2>Sign In!</h2>
+            <button type="button" id="signup-stop">X</button>
         </div>
-    </form>
+        <form>
+            <div id="signup-div-form">
+                <input type="text" id="username" placeholder="username" required>
+                <input type="email" id="email" placeholder="email" required>
+                <input type="password" id="password" placeholder="password" required>
+                <button type="submit" id="signup-submit">Create</button>
+            </div>
+        </form>
+    </div>
 </body>
