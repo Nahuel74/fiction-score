@@ -8,9 +8,8 @@ input {
     color: var(--red);
     font-size: 1.7vw;
     text-align: center;
-
-    padding: 1%;
-    margin: 2%;
+    
+    margin: 1vh;
 }
 
 div {
@@ -19,27 +18,66 @@ div {
     align-items: center;
 }
 
-#main-div {
-    margin: 5% auto;
-    width: 33%;
-    padding: 1% 0;
+#login-background {
+    margin: 5vw auto;
+    width: 33vw;
+    padding: 1vw 0;
 
     background-color: var(--yellow);
 }
 
-#login-div {
-    margin-bottom: 3%;
+#login-input{
+    display: flex;
+    justify-content: space-between;
+}
+
+#login-form {
+    display: flex;
+    flex-flow: row;
+    align-items: center; 
+    justify-content: space-between;
+
+    width: 33vw;
+}
+
+#login-input {
+    margin: 2vh;
 
     display: flex;
     justify-content: space-between;
 }
 
+#login-submit{
+    margin: 1vw;
+}
+
 button {
-    padding: 3%;
+    padding: 1vw;
     border: none;
     background-color: var(--red);
 
     font-family: var(--second-font bold);
     font-size: 1em;
     color: var(--yellow);
+}
+
+#login-submit {
+white-space: nowrap;
+}
+
+#signup-background {
+    width: 40vw;
+    margin: auto;
+    display: flex;
+    background-color: var(--yellow);
+    
+}
+
+#signup-title {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    color: var(--red);
+    white-space: nowrap;
 }
