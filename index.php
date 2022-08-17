@@ -21,7 +21,7 @@
     </head>
 
     <body>
-        <header>
+        <header id="topbar">
             <nav>
                 <a href="index.php">NEW</a>
                 <a href="html/list.php">LIST</a>
