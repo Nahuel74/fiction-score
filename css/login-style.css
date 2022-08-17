@@ -66,18 +66,19 @@ white-space: nowrap;
 }
 
 #signup-background {
-    width: 40vw;
+    width: 33vw;
     margin: auto;
     display: flex;
     background-color: var(--yellow);
-    
 }
 
-#signup-title {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-
+h2 {
     color: var(--red);
-    white-space: nowrap;
+}
+
+#signup-stop {
+    margin-right: 0;
+    margin-left: auto;
+
+    border: solid 2px var(--yellow);
 }

@@ -20,7 +20,7 @@
 
 <body>
 
-    <header>
+    <header id="topbar">
         <nav>
             <a href="../index.php">NEW</a>
             <a href="list.php">LIST</a>
@@ -39,10 +39,8 @@
         <button id="signup-start">Create new account</button>
     </div>
     <div id="signup-background">
-        <div id="signup-title">
-            <h2>Sign In!</h2>
-            <button type="button" id="signup-stop">X</button>
-        </div>
+        <button type="button" id="signup-stop">X</button>
+        <h2 id=>Sign Up!</h2>
         <form>
             <div id="signup-div-form">
                 <input type="text" id="username" placeholder="username" required>

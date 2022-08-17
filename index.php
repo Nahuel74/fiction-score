@@ -28,7 +28,6 @@
                 <a href="html/login.php">LOG IN</a>
             </nav>
         </header>
-
         <main>
 
             <h1 id="main-title">RATE THE MOVIE</h1>
