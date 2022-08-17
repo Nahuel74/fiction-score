@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="topbar">
         <nav>
             <a href="../index.php">NEW</a>
             <a href="list.php">LIST</a>

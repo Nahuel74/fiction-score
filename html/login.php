@@ -32,7 +32,7 @@
         <form id="login-form">
             <div id="login-input">
                 <input type="text" placeholder="username" required="required">
-                <input type="password" placeholder="password" required="required">   
+                <input type="password" placeholder="password" required="required">
             </div>
             <button type="submit" id="login-submit">Log In</button>
         </form>
@@ -40,12 +40,12 @@
     </div>
     <div id="signup-background">
         <button type="button" id="signup-stop">X</button>
-        <h2 id=>Sign Up!</h2>
+        <h2>Sign Up!</h2>
         <form>
             <div id="signup-div-form">
-                <input type="text" id="username" placeholder="username" required>
-                <input type="email" id="email" placeholder="email" required>
-                <input type="password" id="password" placeholder="password" required>
+                <input type="text" id="username" placeholder="username" required="required">
+                <input type="email" id="email" placeholder="email" required="required">
+                <input type="password" id="password" placeholder="password" required="required">
                 <button type="submit" id="signup-submit">Create</button>
             </div>
         </form>
