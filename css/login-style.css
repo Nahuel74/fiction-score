@@ -19,7 +19,7 @@ div {
 }
 
 #login-background {
-    margin: 5vw auto;
+    margin: 5vh auto;
     width: 33vw;
     padding: 1vw 0;
 
@@ -41,7 +41,7 @@ div {
 }
 
 #login-input {
-    margin: 2vh;
+    margin: 7vh 3vh 1vw 1vw;
 
     display: flex;
     justify-content: space-between;
@@ -65,27 +65,17 @@ button {
     white-space: nowrap;
 }
 
-#signup-background {
-    visibility: hidden;
-    width: 33vw;
-    margin: auto;
-    background-color: var(--yellow);
-}
-
-#signup-stop {
-    margin-right: 0;
-    margin-left: auto;
-    border: solid 2px var(--yellow);
-
-    padding: 0.5vh 1vw;
-}
-
 h2 {
     color: var(--red);
     margin: 1.5vh auto;
     position: absolute;
 }
 
-#signup-div-form {
-    padding-top: 2.5vh;
+#signup-start{
+    font-family: var(--second-font);
+    border-bottom: 1px solid transparent;
+}
+
+#signup-start:hover{
+    border-bottom: 1px solid var(--red);
 }

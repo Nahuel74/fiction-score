@@ -16,26 +16,18 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css\main-style.css">
-        <link rel="stylesheet" type="text/css" href="css\index-style.css">
+        <link rel="stylesheet" type="text/css" href="css/main-style.css">
+        <link rel="stylesheet" type="text/css" href="css/index-style.css">
     </head>
 
     <body>
-        <header id="topbar">
-            <nav>
-                <a href="index.php">NEW</a>
-                <a href="html/list.php">LIST</a>
-                <a href="html/login.php">LOG IN</a>
-            </nav>
-        </header>
+
+        <?php	require "partials/header.php" ?>
+
         <main>
-
             <h1 id="main-title">RATE THE MOVIE</h1>
-
             <form>
-
                 <header>
-
                     <input placeholder="Name" type="text" id="input-name" required="required">
                     <div>
                         <select id="select-category">
