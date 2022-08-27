@@ -20,7 +20,7 @@
 
 <body>
 
-    <?php require "../partials/header.php" ?>
+    <?php require "../partials/header-par.php" ?>
 
     <table>
         <thead>

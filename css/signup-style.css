@@ -9,7 +9,7 @@ input {
     font-size: 1.7vw;
     text-align: center;
 
-    margin: 1vh;
+    margin-bottom: 2vh;
 }
 
 div {
@@ -51,4 +51,9 @@ h2 {
 
 #signup-submit{
     margin-top: 1vh;
+}
+
+p{
+    font-family: var(--second-font);
+    color: var(--red);
 }

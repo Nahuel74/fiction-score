@@ -1,23 +1,5 @@
 <?php 
-    require "database.php";
-
-    $message = "";
-
-    if (!empty($_POSTL["username"]) && !empty($_POST["email"]) && !empty($_POST["password"])) {
-        $sql = "INSERT INTO users (username, email, password) VALUES (:username, :username, :password)";
-        $stmt = $connection -> prepare($sql);
-        $stmt -> bindParam(":username", $_POST["username"]);
-        $stmt -> bindParam(":email", $_POST["email"]);
-        $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
-        $stmt -> bindParam(":password", $_POST[$password]);
-    }
-
-    if ($stmt -> execute()){
-        $message = "New user created";
-    } else {
-        $message = "An error ocurred";
-    }
-
+    require "../partials/database-par.php";
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +24,7 @@
 
 <body>
 
-    <?php require "../partials/header.php" ?>
+    <?php require "../partials/header-par.php" ?>
 
     <?php if (!empty($message)): ?>
     <p> <?php $message ?> </p>
@@ -50,14 +32,40 @@
 
     <div id="signup-background">
         <h2>Sign Up!</h2>
-        <form action="login.php" method="post">
+        <form action="../partials/signup-par.php" method="POST">
             <div id="signup-div-form">
-                <input type="text" id="username" name="username" placeholder="username">
-                <input type="email" id="email" name="email" placeholder="email">
-                <input type="password" id="password" name="password" placeholder="password">
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
-                <button type="submit" id="signup-submit">Create</button>
+                <input type="text" name="username" placeholder="username" required>
+                <input type="email" name="email" placeholder="email" required>
+                <input type="password" name="password" placeholder="password" required>
+                <input type="password" name="confirmed-password" placeholder="Confirm your password" required>
+                <button type="submit" name="submit" id="signup-submit">Create</button>
             </div>
         </form>
+    <?php 
+        if(isset($_GET["error"])){
+            if ($_GET["error"] == "emptyinput"){
+                echo "<p>Missing information, user was not created</p>";
+            }
+            else if($_GET["error"] == "invalidusername"){
+                echo "<p>Invalid username</p>";
+            }
+            else if($_GET["error"] == "invalidemail"){
+                echo "<p>Invalid email</p>";
+            }
+            else if($_GET["error"] == "passworderror"){
+                echo "<p>Password doesn't match</p>";
+            }
+            else if($_GET["error"] == "usernametaken"){
+                echo "<p>Username taken</p>";
+            }
+            else if($_GET["error"] == "stmtfailed"){
+                echo "<p>Something failed, please try again</p>";
+            }
+            else if($_GET["error"] == "none"){
+                echo "<p>User created successfully</p>";
+            }
+    }
+    ?>
+
     </div>
 </body>

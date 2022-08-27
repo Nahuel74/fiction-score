@@ -2,11 +2,13 @@ input {
     border: 2px solid var(--red);
     border-radius: 5px;
 
+    padding: 1vh 1vw;
+
     background-color: transparent;
 
     font-family: var(--second-font bold);
     color: var(--red);
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     text-align: center;
 
     margin: 1vh;
@@ -33,7 +35,7 @@ div {
 
 #login-form {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     align-items: center;
     justify-content: space-between;
 
@@ -41,17 +43,14 @@ div {
 }
 
 #login-input {
-    margin: 7vh 3vh 1vw 1vw;
+    margin: 7vh 3vw 1vh 3vw;
 
     display: flex;
     justify-content: space-between;
 }
 
-#login-submit {
-    margin: 1vw;
-}
-
 button {
+    margin-bottom: 1vh;
     padding: 1vw;
     border: none;
     background-color: var(--red);
@@ -59,10 +58,6 @@ button {
     font-family: var(--second-font bold);
     font-size: 1em;
     color: var(--yellow);
-}
-
-#login-submit {
-    white-space: nowrap;
 }
 
 h2 {
@@ -78,4 +73,9 @@ h2 {
 
 #signup-start:hover{
     border-bottom: 1px solid var(--red);
+}
+
+p{
+    font-family: var(--second-font);
+    color: var(--red);
 }

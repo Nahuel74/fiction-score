@@ -22,7 +22,7 @@
 
     <body>
 
-        <?php	require "partials/header.php" ?>
+        <?php	require "partials/header-par.php" ?>
 
         <main>
             <h1 id="main-title">RATE THE MOVIE</h1>
@@ -108,7 +108,7 @@
         </main>
     </body>
 
-    <script type="text/javascript" src="js/dynamic_calculator.js"></script>
-    <script type="text/javascript" src="js/change_title.js"></script>
+    <script type="text/javascript" src="js/dynamic-calculator.js"></script>
+    <script type="text/javascript" src="js/change-title.js"></script>
 
 </html>
