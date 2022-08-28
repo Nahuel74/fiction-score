@@ -94,10 +94,21 @@ button {
     padding: 1vw;
     font-size: 1.25vw;
 
-    margin-left: 78%;
-    margin-top: 3%;
+    margin-left: 78vw;
+    margin-top: 3vh;
 }
 
 button:hover {
     cursor: pointer;
+}
+
+p{
+    margin: 1vh auto;
+
+    font-family: var(--second-font);
+    font-size: 1.1vw;
+    color: var(--yellow);
+    border-bottom: 1px solid var(--yellow);
+    text-align: center;
+    white-space: nowrap;
 }

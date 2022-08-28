@@ -26,11 +26,11 @@
 
         <main>
             <h1 id="main-title">RATE THE MOVIE</h1>
-            <form>
+            <form action="/partials/savelist-par.php" method="POST">
                 <header>
-                    <input placeholder="Name" type="text" id="input-name" required="required">
+                    <input placeholder="Name" name="fname" type="text" id="input-name" required>
                     <div>
-                        <select id="select-category">
+                        <select name="fcat" id="select-category">
                             <option value="movie" class="option-category">Movie</option>
                             <option value="tv-show" class="option-category">TV Show</option>
                             <option value="anime" class="option-category">Anime</option>
@@ -68,30 +68,25 @@
                     <tbody>
                         <tr>
                             <td class="td">
-                                <input type="number" min="-1" max="10" class="input-table">
+                                <input name="fmain" type="number" min="-1" max="10" class="input-table">
                             </td>
                             <td class="td">
-                                <input type="number" min="-1" max="10" class="input-table">
+                                <input name="fsecond" type="number" min="-1" max="10" class="input-table">
                             </td>
                             <td class="td">
-                                <input type="number" min="-1" max="10" class="input-table">
+                                <input name="fant" type="number" min="-1" max="10" class="input-table">
                             </td>
                             <td class="td">
-                                <input type="number" min="-1" max="10" class="input-table">
+                                <input name="fscript" type="number" min="-1" max="10" class="input-table">
                             </td>
                             <td class="td">
-                                <input type="number" min="-1" max="10" class="input-table">
+                                <input name="fper" type="number" min="-1" max="10" class="input-table">
                             </td>
                             <td class="td">
-                                <input
-                                    type="number"
-                                    min="0"
-                                    max="10"
-                                    class="input-table unlisted"
-                                    id="extra-points">
+                                <input name="fextra" type="number" min="0" max="10" class="input-table unlisted" id="extra-points">
                             </td>
                             <td class="td">
-                                <input type="number" disabled="disabled" id="score">
+                                <input name="fscore" type="number" readonly id="score">
                             </td>
                         </tr>
                     </tbody>
@@ -102,7 +97,26 @@
                 <label>
                     "-1" will disable the cell</label>
 
-                <button type="submit" id="submit">Save</button>
+                <button type="submit" name="submit" id="submit">Save</button>
+                <?php 
+                    if (isset($_GET["error"])){
+                        if ($_GET["error"] == "nologin"){
+                            echo "<p>Please Log In</p>";
+                        }
+                        if ($_GET["error"] == "emptyinput"){
+                            echo "<p>Can't save an empty form</p>";
+                        }
+                        else if($_GET["error"] == "fictionexist"){
+                            echo "<p>Fiction already exists</p>";
+                        }
+                        else if($_GET["error"] == "stmtfailed"){
+                            echo "<p>Something failed, please try again</p>";
+                        }
+                        else if($_GET["error"] == "none"){
+                            echo "<p>Fiction saved</p>";
+                        }
+                    }
+                ?>
             </form>
 
         </main>

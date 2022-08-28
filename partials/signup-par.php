@@ -7,7 +7,7 @@
         $confirmedPassword = $_POST["confirmed-password"];
 
         require_once "database-par.php";
-        require_once "functions-par.php";
+        require_once "functions-sign-par.php";
 
         if (emptyInputSignup($username, $email, $password, $confirmedPassword) !== false){
             header("location: ../links/signup.php?error=emptyinput");

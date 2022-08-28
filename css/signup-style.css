@@ -56,4 +56,5 @@ h2 {
 p{
     font-family: var(--second-font);
     color: var(--red);
+    border-bottom: 1px solid var(--red);
 }

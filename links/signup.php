@@ -31,7 +31,7 @@
     <?php endif; ?>
 
     <div id="signup-background">
-        <h2>Sign Up!</h2>
+        <h2>Sign Up</h2>
         <form action="../partials/signup-par.php" method="POST">
             <div id="signup-div-form">
                 <input type="text" name="username" placeholder="username" required>
@@ -60,9 +60,6 @@
             }
             else if($_GET["error"] == "stmtfailed"){
                 echo "<p>Something failed, please try again</p>";
-            }
-            else if($_GET["error"] == "none"){
-                echo "<p>User created successfully</p>";
             }
     }
     ?>

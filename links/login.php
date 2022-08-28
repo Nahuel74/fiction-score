@@ -27,13 +27,13 @@
     <?php require "../partials/header-par.php" ?>
 
     <div id="login-background">
-        <h2>Log In!</h2>
+        <h2>Log In</h2>
         <form action="../partials/login-par.php" method="POST" id="login-form">
             <div id="login-input">
-                <input type="text" name="username" placeholder="username or email" required="required">
-                <input type="password" name="passowrd" placeholder="password" required="required">
+                <input type="text" name="username" placeholder="username or email" required>
+                <input type="password" name="password" placeholder="password" required>
             </div>
-            <button type="submit" id="login-submit">Log In</button>
+            <button type="submit" name="submit" id="login-submit">Log In</button>
         </form>
         <?php 
             if(isset($_GET["error"])){
@@ -45,6 +45,9 @@
                 }
                 else if($_GET["error"] == "wronglogin"){
                     echo "<p>Incorrect username or password</p>";
+                }
+                else if($_GET["error"] == "none"){
+                    echo "<p>User created successfully</p>";
                 }
         }
     ?>
