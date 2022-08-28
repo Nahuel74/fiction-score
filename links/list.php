@@ -20,7 +20,9 @@
 
 <body>
 
-    <?php require "../partials/header-par.php" ?>
+    <?php
+        require "../partials/header-par.php"; 
+    ?>
 
     <table>
         <thead>
@@ -55,41 +57,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td class="td">
-                    <input type="text" disabled="disabled" class="input-table">
-                </td>
-                <td class="td">
-                    <input type="text" disabled="disabled" class="input-table">
-                </td>
-                <td class="td">
-                    <input type="number" disabled="disabled" min="-1" max="10" class="input-table">
-                </td>
-                <td class="td">
-                    <input type="number" disabled="disabled" min="-1" max="10" class="input-table">
-                </td>
-                <td class="td">
-                    <input type="number" disabled="disabled" min="-1" max="10" class="input-table">
-                </td>
-                <td class="td">
-                    <input type="number" disabled="disabled" min="-1" max="10" class="input-table">
-                </td>
-                <td class="td">
-                    <input type="number" disabled="disabled" min="-1" max="10" class="input-table">
-                </td>
-                <td class="td">
-                    <input
-                        type="number"
-                        disabled="disabled"
-                        min="0"
-                        max="10"
-                        class="input-table unlisted"
-                        id="extra-points">
-                </td>
-                <td class="td">
-                    <input type="number" disabled="disabled" id="score">
-                </td>
-            </tr>
+        <?php require_once "../partials/showlist-par.php";?>
         </tbody>
     </table>
 </body>

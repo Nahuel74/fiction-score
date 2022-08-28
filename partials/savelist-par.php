@@ -4,7 +4,7 @@
     if (isset($_POST["submit"]) && isset($_SESSION["id"])){
 
         require_once "database-par.php";
-        require_once "functions-savelist-par.php";
+        require_once "functions-list-par.php";
 
         $userid = $_SESSION["id"];
         $fname = $_POST["fname"];

@@ -14,8 +14,10 @@ th {
     padding: 0;
 }
 
-td {
-    border-color: var(--red);
+.td {
+    border: 1px solid var(--yellow);
+    padding: 1vw;
+    white-space: nowrap;
 }
 
 table input,
@@ -39,4 +41,15 @@ input:disabled {
 input:disabled {
     background-color: var(--yellow);
     color: var(--red);
+}
+
+p{
+    margin: 1vh auto;
+
+    font-family: var(--second-font);
+    font-size: 1.1vw;
+    color: var(--yellow);
+    border-bottom: 1px solid var(--yellow);
+    text-align: center;
+    white-space: nowrap;
 }
