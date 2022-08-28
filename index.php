@@ -25,6 +25,28 @@
         <?php	require "partials/header-par.php" ?>
 
         <main>
+        <?php 
+                    if (isset($_GET["error"])){
+                        if ($_GET["error"] == "nologin"){
+                            echo "<p>Please Log In</p>";
+                        }
+                        if ($_GET["error"] == "emptyinput"){
+                            echo "<p>Can't save an empty form</p>";
+                        }
+                        else if($_GET["error"] == "fictionexist"){
+                            echo "<p>Fiction already exists</p>";
+                        }
+                        else if($_GET["error"] == "stmtfailed"){
+                            echo "<p>Something failed, please try again</p>";
+                        }
+                        else if ($_GET["error"] == "nofiction"){
+                            echo "<p>You don't have fictions saved</p>";
+                        }
+                        else if($_GET["error"] == "none"){
+                            echo "<p>Fiction saved</p>";
+                        }
+                    }
+                ?>
             <h1 id="main-title">RATE THE MOVIE</h1>
             <form action="/partials/savelist-par.php" method="POST">
                 <header>
@@ -98,25 +120,6 @@
                     "-1" will disable the cell</label>
 
                 <button type="submit" name="submit" id="submit">Save</button>
-                <?php 
-                    if (isset($_GET["error"])){
-                        if ($_GET["error"] == "nologin"){
-                            echo "<p>Please Log In</p>";
-                        }
-                        if ($_GET["error"] == "emptyinput"){
-                            echo "<p>Can't save an empty form</p>";
-                        }
-                        else if($_GET["error"] == "fictionexist"){
-                            echo "<p>Fiction already exists</p>";
-                        }
-                        else if($_GET["error"] == "stmtfailed"){
-                            echo "<p>Something failed, please try again</p>";
-                        }
-                        else if($_GET["error"] == "none"){
-                            echo "<p>Fiction saved</p>";
-                        }
-                    }
-                ?>
             </form>
 
         </main>
