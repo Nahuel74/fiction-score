@@ -47,3 +47,7 @@ a {
 a:hover {
     border-bottom: solid;
 }
+
+input::placeholder{
+    color: var(--red);
+}

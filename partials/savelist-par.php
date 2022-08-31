@@ -24,9 +24,7 @@
         }
 
         if (fictionExist($connection, $fname) !== false){
-
-            header("location: /index.php?error=fictionexist");
-            exit();
+            header("location: ../partials/edit-list-par.php");
         }
 
         saveFiction($connection, $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fper, $fextra, $fscore, $userid);

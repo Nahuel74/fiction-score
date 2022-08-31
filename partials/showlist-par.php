@@ -13,7 +13,7 @@
             exit();
         }
         else {
-            displayFiction($connection, $userid);
+            displayList($connection, $userid);
         }
 
     }
