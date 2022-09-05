@@ -12,17 +12,17 @@ input:read-only {
 
 h1 {
     text-align: center;
-    margin: 3% 0;
-    font-size: 3.25vw;
+    margin: 1em 0;
+    font-size: 3em;
 }
 
 form {
-    margin-top: 7%;
+    margin-top: 1em;
 }
 
 form header {
     padding: 0;
-    margin: 2%;
+    margin: 1em;
     display: flex;
     justify-content: space-around;
     background: transparent;
@@ -30,11 +30,11 @@ form header {
 
 header input {
     border: 0;
-    border-bottom: 2px solid var(--yellow);
+    border-bottom: 0.01em solid var(--yellow);
     background-color: transparent;
     color: var(--yellow);
     font-family: var(--second-font);
-    font-size: 2vw;
+    font-size: 1.2em;
     transition: 500ms;
 }
 
@@ -49,8 +49,9 @@ input::placeholder{
 }
 
 select {
+    height: 3em;
     background-color: var(--yellow);
-    padding: 1vw;
+    padding: 0.5em;
     font-size: 1.5vw;
 }
 
@@ -59,16 +60,16 @@ select:hover {
 }
 
 table {
-    margin-top: 7%;
+    margin-top: 5em;
 }
 
 table,
 td,
 th {
     font-family: var(--second-font);
-    font-size: 1.3vw;
+    font-size: 1em;
     text-align: center;
-    border: 1px solid;
+    border: 0.01em solid;
     border-collapse: collapse;
     margin-right: auto;
     margin-left: auto;
@@ -79,11 +80,11 @@ table input,
 table input:disabled {
     width: 100%;
     display: block;
-    padding: 0.25vw 0;
+    padding: 0.1em 0;
 }
 
 th {
-    padding: 0.3vw 1vw;
+    padding: 0.3em 0.5em;
 }
 
 form label {
@@ -96,10 +97,9 @@ button {
     border: none;
     background-color: var(--yellow);
     padding: 1vw;
+    display: block;
+    margin: 0 auto;
     font-size: 1.25vw;
-
-    margin-left: 78vw;
-    margin-top: 3vh;
 }
 
 button:hover {
@@ -107,12 +107,12 @@ button:hover {
 }
 
 p{
-    margin: 1vh auto;
+    margin: 0.5em auto;
 
     font-family: var(--second-font);
-    font-size: 1.1vw;
+    font-size: 1em;
     color: var(--yellow);
-    border-bottom: 1px solid var(--yellow);
+    border-bottom: 0.01em solid var(--yellow);
     text-align: center;
     white-space: nowrap;
 }

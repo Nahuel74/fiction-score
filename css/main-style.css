@@ -11,7 +11,7 @@ input::-webkit-outer-spin-button {
     background-color: var(--red);
     font-family: 'Shojumaru', cursive;
     color: var(--yellow);
-    font-size: 1.25vw;
+    font-size: 1em;
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    padding: 1%;
+    padding: 0.7em;
     margin: 0;
     background-color: var(--yellow);
 }
@@ -37,10 +37,10 @@ header nav {
 }
 
 a {
-    padding: 0.2% 1%;
+    padding: 0.3em;
     text-decoration: none;
     color: var(--red);
-    font-size: 1.6vw;
+    font-size: 1.2em;
     border-bottom: solid transparent;
 }
 
