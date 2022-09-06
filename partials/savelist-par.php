@@ -13,11 +13,10 @@
         $fsecond = $_POST["fsecond"];
         $fant = $_POST["fant"];
         $fscript = $_POST["fscript"];
-        $fper = $_POST["fper"];
         $fextra = $_POST["fextra"];
         $fscore = $_POST["fscore"];
 
-        if (emptyInputs($fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fper, $fextra) !== false){
+        if (emptyInputs($fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fextra) !== false){
 
             header("location: /index.php?error=emptyinput");
             exit();
@@ -27,7 +26,7 @@
             header("location: ../partials/edit-list-par.php");
         }
 
-        saveFiction($connection, $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fper, $fextra, $fscore, $userid);
+        saveFiction($connection, $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fextra, $fscore, $userid);
 
     }
     else{

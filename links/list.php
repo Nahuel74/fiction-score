@@ -46,9 +46,6 @@
                     <span class="th">Script</span>
                 </th>
                 <th>
-                    <span class="th">Personal<br>Opinion</span>
-                </th>
-                <th>
                     <span class="th">Extra<br>points</span>
                 </th>
                 <th>

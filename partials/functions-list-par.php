@@ -2,11 +2,11 @@
 
 use LDAP\Result;
 
-    function emptyInputs($fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fper, $fextra) {
+    function emptyInputs($fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fextra) {
 
         $result = "";
 
-        if (empty($fname) || empty($fcat) || (empty($fmain) && empty($fsecond) && empty($fant) && empty($fscript) && empty($fper) && empty($fextra))){
+        if (empty($fname) || empty($fcat) || (empty($fmain) && empty($fsecond) && empty($fant) && empty($fscript) && empty($fextra))){
             $result = true;
         }
         else{
@@ -41,9 +41,9 @@ use LDAP\Result;
         mysqli_stmt_close($stmt);
     }
 
-    function saveFiction($connection, $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fper, $fextra, $fscore, $userid){
+    function saveFiction($connection, $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fextra, $fscore, $userid){
 
-        $sql = "INSERT INTO score_list (fname, fcat, fmain, fsecond, fant, fscript, fper, fextra, fscore, created_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        $sql = "INSERT INTO score_list (fname, fcat, fmain, fsecond, fant, fscript, fextra, fscore, created_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
         $stmt = mysqli_stmt_init($connection);
 
         if (!mysqli_stmt_prepare($stmt, $sql)){
@@ -51,7 +51,7 @@ use LDAP\Result;
             exit();
         }
         else {
-            mysqli_stmt_bind_param($stmt, "ssiiiiiiii", $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fper, $fextra, $fscore, $userid);
+            mysqli_stmt_bind_param($stmt, "ssiiiiiii", $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fextra, $fscore, $userid);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
@@ -100,7 +100,6 @@ use LDAP\Result;
             $fsecond = $row["fsecond"];
             $fant = $row["fant"];
             $fscript = $row["fscript"];
-            $fper = $row["fper"];
             $fextra = $row["fextra"];
             $fscore = $row["fscore"];
             $fid = $row["fid"];
@@ -112,11 +111,10 @@ use LDAP\Result;
                     <td class="td">'.$fsecond.'</td>
                     <td class="td">'.$fant.'</td>
                     <td class="td">'.$fscript.'</td>
-                    <td class="td">'.$fper.'</td>
                     <td class="td">'.$fextra.'</td>
                     <td class="td">'.$fscore.'</td>
                     <td class="td">
-                        <a href="../links/edit-list.php?id='.$fid.'" target="_blank" class="edit">Edit</a>
+                        <a href="../links/edit-list.php?id='.$fid.'" class="edit">Edit</a>
                     </td>
             </tr>';
         }
@@ -134,7 +132,6 @@ use LDAP\Result;
             $fsecond = $row["fsecond"];
             $fant = $row["fant"];
             $fscript = $row["fscript"];
-            $fper = $row["fper"];
             $fextra = $row["fextra"];
             $fscore = $row["fscore"];
             $fid = $row["fid"];
@@ -149,15 +146,14 @@ use LDAP\Result;
                 <td class="td">'.$fsecond.'</td>
                 <td class="td">'.$fant.'</td>
                 <td class="td">'.$fscript.'</td>
-                <td class="td">'.$fper.'</td>
                 <td class="td">'.$fextra.'</td>
                 <td class="td">'.$fscore.'</td>
             </tr>';
 
             echo '<form action="../partials/updatelist-par.php" method="POST">
             <tr>
-            <td class="td"> <input name="fid" readonly required value ="'.$fid.'"> </td>
-                <td class="td"> <input name="fname" type="text" required> </td>
+            <td class="td"> <input name="fid" readonly value ="'.$fid.'"> </td>
+                <td class="td"> <input name="fname" type="text"> </td>
                 <td class="td"> 
                     <select name="fcat" id="select-category">
                         <option value="movie" class="option-category">Movie</option>
@@ -169,18 +165,13 @@ use LDAP\Result;
                 <td class="td"> <input name="fsecond" type="number" min="-1" max="10" class="input-table"> </td>
                 <td class="td"> <input name="fant" type="number" min="-1" max="10" class="input-table"> </td>
                 <td class="td"> <input name="fscript" type="number" min="-1" max="10" class="input-table"> </td>
-                <td class="td"> <input name="fper" type="number" min="-1" max="10" class="input-table"> </td>
                 <td class="td"> <input name="fextra" type="number" min="0" max="10" class="input-table unlisted" id="extra-points"> </td>
                 <td class="td"> <input name="fscore" type="number" readonly id="score"> </td>
                 <td class="td">
-                    <button type="submit" name="submit">Save</button>   
+                    <button type="submit" name="submit" value="save">Save</button>
+                    <button type="submit" name="submit" value="delete">Delete</button>   
                 </td>
             </tr> </form>';
-
-            echo '
-                <form action="../partials/deletelist-par.php" method="POST">
-                    <div class="container"> <button type="submit" name="delete" id="delete">Delete fiction</button></div> 
-                </form>';
 
             include("../partials/dynamic-calculator-par.php");
         }
@@ -213,9 +204,9 @@ use LDAP\Result;
         mysqli_stmt_close($stmt);
     }
 
-    function updateFiction($connection, $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fper, $fextra, $fscore, $fid) {
+    function updateFiction($connection, $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fextra, $fscore, $fid) {
 
-        $sql = "UPDATE score_list SET fname = ?, fcat = ?, fmain = ?, fsecond = ?, fant = ?, fscript = ?, fper = ?, fextra = ?, fscore = ? WHERE fid = $fid;";
+        $sql = "UPDATE score_list SET fname = ?, fcat = ?, fmain = ?, fsecond = ?, fant = ?, fscript = ?, fextra = ?, fscore = ? WHERE fid = $fid;";
         $stmt = mysqli_stmt_init($connection);
 
         if (!mysqli_stmt_prepare($stmt, $sql)){
@@ -223,7 +214,7 @@ use LDAP\Result;
             exit();
         }
         else {
-            mysqli_stmt_bind_param($stmt, "ssiiiiiii", $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fper, $fextra, $fscore);
+            mysqli_stmt_bind_param($stmt, "ssiiiiii", $fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fextra, $fscore);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
@@ -234,21 +225,16 @@ use LDAP\Result;
 
     function deleteFiction($connection, $fid) {
 
-        $sql = "DELETE FROM score_list WHERE fid = ?;";
-        $stmt = mysqli_stmt_init($connection);
+        $sql = "DELETE FROM score_list WHERE fid = '$fid';";
 
-        if (!mysqli_stmt_prepare($stmt, $sql)){
+        if (mysqli_query($connection, $sql) === false){
             header("location: /index.php?error=stmtfailed");
             exit();
         }
         else {
-            mysqli_stmt_bind_param($stmt, "i", $fid);
-            mysqli_stmt_execute($stmt);
-            mysqli_stmt_close($stmt);
+            header("location: /index.php?error=none");
+            exit();
         }
-
-        header("location: /index.php?error=none");
-        exit();
     }
 
 ?>

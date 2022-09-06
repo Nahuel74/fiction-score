@@ -29,7 +29,7 @@
                             echo "<p>You don't have fictions saved</p>";
                         }
                         else if($_GET["error"] == "none"){
-                            echo "<p>Fiction saved</p>";
+                            echo "<p>changes saved successfully</p>";
                         }
                     }
                 ?>
@@ -62,13 +62,10 @@
                                 <span class="th">Script</span>
                             </th>
                             <th>
-                                <span class="th">Personal<br>Opinion</span>
+                                <span class="th">Score</span>
                             </th>
                             <th>
                                 <span class="th">Extra<br>points</span>
-                            </th>
-                            <th>
-                                <span class="th">Score</span>
                             </th>
                         </tr>
                     </thead>
@@ -76,25 +73,22 @@
                     <tbody>
                         <tr>
                             <td class="td">
-                                <input name="fmain" type="number" min="-1" max="10" class="input-table">
+                                <input name="fmain" type="number" step="0.1" min="-1" max="10" class="input-table">
                             </td>
                             <td class="td">
-                                <input name="fsecond" type="number" min="-1" max="10" class="input-table">
+                                <input name="fsecond" type="number" step="0.1" min="-1" max="10" class="input-table">
                             </td>
                             <td class="td">
-                                <input name="fant" type="number" min="-1" max="10" class="input-table">
+                                <input name="fant" type="number" step="0.1" min="-1" max="10" class="input-table">
                             </td>
                             <td class="td">
-                                <input name="fscript" type="number" min="-1" max="10" class="input-table">
-                            </td>
-                            <td class="td">
-                                <input name="fper" type="number" min="-1" max="10" class="input-table">
-                            </td>
-                            <td class="td">
-                                <input name="fextra" type="number" min="0" max="10" class="input-table unlisted" id="extra-points">
+                                <input name="fscript" type="number" step="0.1" min="-1" max="10" class="input-table">
                             </td>
                             <td class="td">
                                 <input name="fscore" type="number" readonly id="score">
+                            </td>
+                            <td class="td">
+                                <input name="fextra" type="number" step="0.1" min="0" max="10" class="input-table unlisted" id="extra-points">
                             </td>
                         </tr>
                     </tbody>
