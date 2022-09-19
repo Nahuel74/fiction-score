@@ -1,26 +1,60 @@
 h1 {
     text-align: center;
+    margin: 1em 0;
+    font-size: 3em;
 }
 
 form header {
     display: flex;
     justify-content: space-around;
+    padding: 1em;
+    margin-top: 2.5em;
+    background: transparent;
 }
 
 input {
     text-align: center;
-    border-bottom: 2px solid transparent;
     color: var(--red);
 }
 
 input:focus {
-    border-bottom: 2px solid var(--red);
     transition: 400ms;
 }
 
+header input {
+    border: 0;
+    border-bottom: 2px solid var(--yellow);
+    background-color: transparent;
+    color: var(--wheat);
+    font-family: var(--second-font);
+    font-size: 1.4em;
+    transition: 500ms;
+}
+
+header input:focus {
+    border-bottom: 2px solid var(--wheat);
+    transition: 500ms;
+}
+
+header input:focus::placeholder {
+    color: var(--wheat);
+    transition: 500ms;
+}
+
+header input::placeholder {
+    color: var(--yellow);
+}
+
 select {
-    background-color: wheat;
+    height: 3em;
+    background-color: var(--yellow);
+    padding: 0.5em;
+    font-size: 1.4em;
     border: none;
+}
+
+select:hover {
+    cursor: pointer;
 }
 
 select:focus {
@@ -29,6 +63,31 @@ select:focus {
 
 hr {
     display: none;
+}
+
+table {
+    margin: 3em auto 0 auto;
+}
+
+table, th, td {
+    border: 1px solid var(--yellow);
+    border-collapse: collapse;
+    font-family: var(--second-font);
+}
+
+th {
+    padding: 0.5em 3vw;
+}
+
+table input,
+table input:read-only {
+    width: 100%;
+    display: block;
+    padding: 0.1em 0;
+}
+
+table input:focus {
+    filter: opacity(0.9);
 }
 
 label {
@@ -42,22 +101,22 @@ button {
     border: none;
     display: block;
     margin: 0 auto;
-    height: 2.5em;
-    width: 4.5em;
+    font-size: 1em;
+    height: 3em;
+    width: 6em;
+    transition: 500ms;
+}
+
+button:hover {
+    background-color: var(--wheat);
+    color: var(--red);
 }
 
 @media only screen and (max-width: 760px){
 
-    header nav {
-        height: 7vh;
-    }
-
-    header nav a {
-        font-size: 1.5em;
-    }
-
     h1 {
         margin-top: 7vh;
+        font-size: 2.5em;
     }
 
     form {
@@ -72,12 +131,36 @@ button {
     input {
         width: 40vw;
         font-size: 1.3em;
+        border-bottom: 2px solid transparent;
+    }
+
+    input:focus {
+        border-bottom: 2px solid var(--red);
+    }
+
+    input:read-only:focus {
+        border-bottom: 2px solid var(--wheat);
+    }
+
+    header input {
+        border-bottom: 2px solid var(--red);
+        color: var(--red);
+    }
+    
+    header input:focus {
+        border-bottom: 2px solid var(--wheat);
+    }
+    
+    header input::placeholder {
+        color: var(--red);
     }
 
     select{
         text-align: center;
         font-size: 1.3em;
         padding: 1px 2px 2px 1px;
+        background-color: var(--red);
+        color: var(--wheat);
     }
 
     hr{
@@ -139,7 +222,6 @@ button {
         margin-top: 1em;
         border-bottom: 2x solid var(--red);
     }
-
 }
 
 @media only screen and (max-width: 324px){
