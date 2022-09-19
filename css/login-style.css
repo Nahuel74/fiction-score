@@ -1,0 +1,102 @@
+input {
+    border: none;
+    border-radius: 5px;
+
+    margin: 1vh;
+    padding: 0.5em;
+    width: 100%;
+
+    background-color: var(--wheat);
+
+    color: var(--red);
+    font-size: 1em;
+    text-align: center;
+    transition:500ms;
+}
+
+input:focus {
+    filter: opacity(0.9);
+}
+
+#login-background {
+    margin: auto;
+    margin-top: 5%;
+    width: 33%;
+    height: 50%;
+
+    border-radius: 5px;
+    background-color: var(--yellow);
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+h2 {
+    color: var(--red);
+    margin-bottom: 0;
+    font-size: 2em;
+}
+
+#login-form {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#login-input {
+    display: grid;
+    justify-items: center;
+}
+
+button {
+    margin-top: 15px;
+    padding: 0.75em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--red);
+
+    font-family: var(--second-font bold);
+    font-size: 1em;
+    color: var(--yellow);
+
+    transition: 400ms;
+}
+
+button:hover {
+    background-color: var(--wheat);
+    color: var(--red);
+}
+
+#signup-start{
+    font-family: var(--second-font);
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    margin-bottom: 5px;
+}
+
+#signup-start:hover{
+    border-bottom: 2px solid var(--red);
+    color: var(--wheat);
+}
+
+p{
+    font-family: var(--second-font);
+    color: var(--red);
+    border-bottom: 1px solid var(--red);
+    margin: 0;
+}
+
+@media only screen and (max-width: 760px){
+    #login-background {
+        margin-top: 10vh;
+        height: 50%;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}

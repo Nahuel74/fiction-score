@@ -18,14 +18,12 @@
 
     <div id="signup-background">
         <h2>Sign Up</h2>
-        <form action="../partials/signup-par.php" method="POST">
-            <div id="signup-div-form">
-                <input type="text" name="username" placeholder="username" required>
-                <input type="email" name="email" placeholder="email" required>
-                <input type="password" name="password" placeholder="password" required>
-                <input type="password" name="confirmed-password" placeholder="Confirm your password" required>
-                <button type="submit" name="submit" id="signup-submit">Create</button>
-            </div>
+        <form action="../partials/signup-par.php" method="POST" id="signup-form">
+            <input type="text" name="username" placeholder="username" required>
+            <input type="email" name="email" placeholder="email" required>
+            <input type="password" name="password" placeholder="password" required>
+            <input type="password" name="confirmed-password" placeholder="Confirm your password" required>
+            <button type="submit" name="submit" id="signup-submit">Create</button>
         </form>
     <?php 
         if(isset($_GET["error"])){
