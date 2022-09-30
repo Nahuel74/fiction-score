@@ -6,6 +6,7 @@
 
 # create database
 CREATE DATABASE `fictionscore`;
+
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(16) NOT NULL,
