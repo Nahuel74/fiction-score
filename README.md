@@ -4,7 +4,7 @@
 * CRUD Fictions
 * Responsive Design on Index, Login and Sign Up
 
-#create database
+# create database
 CREATE DATABASE `fictionscore`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
