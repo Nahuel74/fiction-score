@@ -112,6 +112,11 @@ button:hover {
     color: var(--red);
 }
 
+p {
+    font-family: var(--second-font);
+    text-align: center;
+}
+
 @media only screen and (max-width: 760px){
 
     h1 {
@@ -222,6 +227,16 @@ button:hover {
         margin-top: 1em;
         border-bottom: 2x solid var(--red);
     }
+
+    table, tbody, td { 
+		display: block; 
+    }
+    thead{
+        display: none;
+    }
+    td { 
+		position: relative;
+	}
 }
 
 @media only screen and (max-width: 324px){

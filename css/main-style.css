@@ -71,13 +71,5 @@ input::placeholder{
 }
 
 @media only screen and (max-width: 760px){
-    table, tbody, td { 
-		display: block; 
-    }
-    thead{
-        display: none;
-    }
-    td { 
-		position: relative;
-	}
+
 }
