@@ -29,4 +29,4 @@ CREATE TABLE `score_list` (
   PRIMARY KEY (`fid`),
   KEY `created_by` (`created_by`),
   CONSTRAINT `score_list_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`)
-)
+);
