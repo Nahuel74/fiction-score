@@ -13,6 +13,7 @@ CREATE TABLE `users` (
   `email` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 );
+
 CREATE TABLE `score_list` (
   `fid` int(11) NOT NULL AUTO_INCREMENT,
   `fname` varchar(255) NOT NULL,
