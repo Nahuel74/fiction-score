@@ -20,7 +20,7 @@
 
             if (emptyInputs($fname, $fcat, $fmain, $fsecond, $fant, $fscript, $fextra) !== false){
 
-                header("location: /list.php?error=emptyinput");
+                header("location: /links/list.php?error=emptyinput");
                 exit();
             }
             else {

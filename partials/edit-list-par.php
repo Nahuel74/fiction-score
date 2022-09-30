@@ -8,7 +8,7 @@
     if (isset($_GET["id"])){
 
         if (checkProperty($connection, $userid, $fid) === false){
-            header("location: ../links/list.php?error=nopermision");
+            header("location: ../links/list.php?error=nopermission");
             exit();
         }
         else {

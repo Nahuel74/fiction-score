@@ -66,6 +66,13 @@ table a:hover {
     color: white;
 }
 
+select {
+    background-color: var(--yellow);
+    padding: 0.2em;
+    font-size: 1em;
+    border: none;
+}
+
 p{
     margin: 1vh auto;
 

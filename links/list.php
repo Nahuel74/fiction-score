@@ -12,7 +12,7 @@
     ?>
     <?php 
         if (isset($_GET["error"])){
-            if ($_GET["error"] == "nopermision"){
+            if ($_GET["error"] == "nopermission"){
                 echo "<p>You don't have access to edit that fiction</p>";
             }
             if ($_GET["error"] == "emptyinput"){

@@ -45,7 +45,7 @@
                         </select>
                     </div>
                 </header>
-
+                <hr>
                 <table>
                     <thead>
                         <tr>
