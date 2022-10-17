@@ -7,7 +7,7 @@
 # create database
 CREATE DATABASE `fictionscore`;
 
-USE fictionscore;
+USE `fictionscore`;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
