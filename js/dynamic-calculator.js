@@ -9,12 +9,16 @@ function delay(ms) {
 async function calculate() {
     for (let i = 0; i < inputTable.length; i++) { //check all the columns
         inputTable[i].oninput = function () {
-            if (inputTable[i].value > 10) { //set max input as 10
+            if (inputTable[i].value > 10) {
                 inputTable[i].value = 10;
             }
-            if (inputTable[i].value < -1) { //set min input as -1
+            if (inputTable[i].value < -1 && inputTable[i].id != "extra-points") {
                 inputTable[i].value = -1;
             }
+            if (inputTable[i].value < -10) {
+                inputTable[i].value = -10;
+            }
+
             let a = 0;
             let b = 0;
             for (let x = 0; x < inputTable.length; x++) {
@@ -31,6 +35,9 @@ async function calculate() {
             score.value = Math.round((a / b) + Number(extraPoints.value))
             if (score.value > 10) {
                 score.value = 10
+            }
+            else if (score.value < 0) {
+                score.value = 0
             }
         }
     }
