@@ -32,3 +32,7 @@ CREATE TABLE `score_list` (
   KEY `created_by` (`created_by`),
   CONSTRAINT `score_list_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`)
 );
+
+# extra
+
+Change `$dbUsername = "root";` and `$dbPassword = "";` to your respective DB username:password in `partials/database-par.php`
